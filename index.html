@@ -7,90 +7,100 @@
 
 <style>
 body {
-  margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
-  background: #0a0a0a;
-  color: #fff;
-  line-height: 1.8;
+  margin:0;
+  font-family:sans-serif;
+  background:#0a0a0a;
+  color:#fff;
+  line-height:1.8;
+}
+
+header {
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.8);
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+header a {
+  color:#fff;
+  text-decoration:none;
+  margin:0 10px;
+  font-size:14px;
 }
 
 section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1, h2 {
-  font-weight: 600;
+  padding:100px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
 .hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(to bottom, #000, #111);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-.hero h1 {
-  font-size: 2.5em;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: 1px solid #fff;
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-}
+h1 {font-size:2.5em;}
+h2 {margin-bottom:20px;}
 
 .grid {
-  display: grid;
-  gap: 20px;
+  display:grid;
+  gap:20px;
 }
 
 @media(min-width:768px){
-  .grid-3 {
-    grid-template-columns: repeat(3,1fr);
-  }
+  .grid-3 {grid-template-columns:repeat(3,1fr);}
 }
 
 .box {
-  border: 1px solid #333;
-  padding: 20px;
-}
-
-.company {
-  background: #111;
+  border:1px solid #333;
+  padding:20px;
 }
 
 footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 14px;
-  color: #aaa;
+  padding:40px;
+  text-align:center;
+  color:#aaa;
 }
 </style>
-
 </head>
 
 <body>
+
+<header>
+  <div>ROKUWAN</div>
+  <nav>
+    <a href="#vision">VISION</a>
+    <a href="#service">SERVICE</a>
+    <a href="#story">STORY</a>
+    <a href="#company">COMPANY</a>
+    <a href="#recruit">RECRUIT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
 
 <!-- HERO -->
 <section class="hero">
   <div>
     <h1>運ぶのは、荷物以上の価値。</h1>
-    <p>小さな会社だからこそ、届けられる品質がある。</p>
-    <a href="#contact" class="btn">お問い合わせ</a>
+    <p>
+      私たちが運んでいるのは、ただの荷物ではありません。<br>
+      お客様の想い、企業の信用、そして地域の未来。<br>
+      そのすべてを、一便一便に込めて走っています。
+    </p>
   </div>
 </section>
 
 <!-- VISION -->
-<section>
-  <h2>一人の挑戦が、物流を変えていく。</h2>
+<section id="vision">
+  <h2>VISION</h2>
   <p>
+    一人の挑戦が、物流を変えていく。<br><br>
     東京で物流の現場を経験し、配送の厳しさもやりがいも感じてきました。<br>
     「もっと丁寧に、もっと誠実に届けられるはずだ」<br><br>
     その想いから、この会社は始まりました。
@@ -98,65 +108,94 @@ footer {
 </section>
 
 <!-- SERVICE -->
-<section>
+<section id="service">
   <h2>SERVICE</h2>
+  <p>小さな会社だからこそ、できる品質がある。</p>
+
   <div class="grid grid-3">
-    <div class="box">宅配委託</div>
+    <div class="box">宅配委託便</div>
     <div class="box">スポット便</div>
     <div class="box">企業配送</div>
   </div>
-  <p>ただ届けるだけではなく、企業の“顔”としての品質を提供します。</p>
+
+  <p>
+    柔軟さ、丁寧さ、スピード。そのすべてを一便に込めて。<br><br>
+    「断らない」「柔軟に動く」「誠実に届ける」<br>
+    この姿勢を大切にしています。
+  </p>
 </section>
 
 <!-- STORY -->
-<section>
-  <h2>泥臭さを、誇りに変える。</h2>
+<section id="story">
+  <h2>STORY</h2>
+
+  <p><strong>泥臭さを、誇りに変える。</strong></p>
+
   <p>
-    配送の現場は決して楽ではありません。<br>
+    配送の現場は、決してきれいごとだけではありません。<br>
     それでも走り続けてきたのは、「届ける」という仕事に誇りがあるからです。
+  </p>
+
+  <p>
+    東京で学んだ厳しさと、大阪・和歌山で感じた温かさ。<br>
+    その両方を胸に、独立という道を選びました。
   </p>
 </section>
 
 <!-- FEATURE -->
 <section>
   <h2>FEATURE</h2>
+
   <div class="grid grid-3">
-    <div class="box">迅速対応</div>
+    <div class="box">誠実な対応</div>
     <div class="box">丁寧な配送</div>
     <div class="box">柔軟な対応</div>
   </div>
+
+  <p>
+    「どう運ぶか」ではなく「どう向き合うか」。<br>
+    その姿勢を大切にしています。
+  </p>
 </section>
 
 <!-- COMPANY -->
-<section class="company">
+<section id="company">
   <h2>COMPANY</h2>
+
   <p>
-    会社名：株式会社ロクワン<br>
+    株式会社ロクワン<br>
     代表：赤池和人<br>
-    所在地：大阪府泉南郡岬町望海坂1丁目3番6号<br>
-    電話：072-457-8717
+    大阪府泉南郡岬町望海坂1丁目3番6号<br>
+    TEL：072-457-8717
   </p>
 
-  <iframe 
-    src="https://maps.google.com/maps?q=大阪府泉南郡岬町望海坂1丁目3番6号&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%" height="300" style="border:0;">
-  </iframe>
+  <iframe src="https://maps.google.com/maps?q=大阪府泉南郡岬町望海坂1丁目3番6号&output=embed"
+  width="100%" height="300"></iframe>
 </section>
 
 <!-- RECRUIT -->
-<section>
+<section id="recruit">
   <h2>RECRUIT</h2>
+
   <p>
-    未経験歓迎・独立支援あり。<br>
-    月収30万〜50万も可能（稼働による）
+    未経験歓迎・独立支援あり
   </p>
+
+  <ul>
+    <li>月収30万〜50万可能</li>
+    <li>車両リースあり</li>
+    <li>確定申告サポートあり</li>
+  </ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>CONTACT</h2>
-  <p>お問い合わせはお電話にてお願いいたします。</p>
-  <p><strong>072-457-8717</strong></p>
+
+  <p>
+    まずはお気軽にご相談ください。<br>
+    TEL：072-457-8717
+  </p>
 </section>
 
 <footer>
@@ -165,3 +204,5 @@ footer {
 
 </body>
 </html>
+
+
