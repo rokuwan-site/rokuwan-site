@@ -14,7 +14,6 @@ body {
   line-height:1.8;
 }
 
-/* ===== ヘッダー ===== */
 header {
   position:fixed;
   width:100%;
@@ -25,6 +24,7 @@ header {
   padding:12px 30px;
   z-index:1000;
 }
+
 header a {
   color:#fff;
   text-decoration:none;
@@ -32,14 +32,13 @@ header a {
   font-size:14px;
 }
 
-/* ===== セクション ===== */
 section {
   padding:100px 20px;
   max-width:1100px;
   margin:auto;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
   height:100vh;
   background:url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d") center/cover no-repeat;
@@ -47,7 +46,9 @@ section {
   align-items:center;
   justify-content:center;
   text-align:center;
+  position:relative;
 }
+
 .hero::before {
   content:"";
   position:absolute;
@@ -55,46 +56,54 @@ section {
   height:100%;
   background:rgba(0,0,0,0.6);
 }
+
 .hero div {
   position:relative;
   z-index:1;
 }
+
 .hero h1 {
   font-size:2.5em;
 }
 
-/* ===== グリッド ===== */
+/* GRID */
 .grid {
   display:grid;
   gap:20px;
 }
+
 @media(min-width:768px){
   .grid-3 {grid-template-columns:repeat(3,1fr);}
 }
 
-/* ===== ボックス ===== */
+/* BOX */
 .box {
   border:1px solid #333;
   padding:20px;
   background:#111;
   transition:0.3s;
 }
+
 .box:hover {
   transform:translateY(-5px);
 }
 
-/* ===== フェードイン ===== */
+/* FADE */
 .fade {
   opacity:0;
   transform:translateY(30px);
   transition:1s;
 }
+
 .fade.show {
   opacity:1;
   transform:none;
 }
 
-/* ===== フッター ===== */
+ul {
+  padding-left:20px;
+}
+
 footer {
   padding:40px;
   text-align:center;
@@ -124,7 +133,9 @@ footer {
     <h1>運ぶのは、荷物以上の価値。</h1>
     <p>大阪・和歌山で軽貨物配送なら株式会社ロクワン</p>
     <p>
-      想い・信用・未来を、一便一便に込めて届ける。
+      私たちが運んでいるのは、ただの荷物ではありません。<br>
+      お客様の想い、企業の信用、そして地域の未来。<br>
+      そのすべてを、一便一便に込めて走っています。
     </p>
   </div>
 </section>
@@ -134,53 +145,73 @@ footer {
   <h2>VISION</h2>
   <p>
     一人の挑戦が、物流を変えていく。<br><br>
-    「もっと丁寧に、もっと誠実に届ける」<br>
+    東京で物流の現場を経験し、配送の厳しさもやりがいも感じてきました。<br>
+    「もっと丁寧に、もっと誠実に届けられるはずだ」<br><br>
     その想いから、この会社は始まりました。
   </p>
 </section>
 
-<!-- SERVICE -->
+<!-- SERVICE（最終版） -->
 <section id="service" class="fade">
   <h2>SERVICE</h2>
+
+  <p><strong>小さな会社だからこそ、できる品質がある。</strong></p>
+  <p>柔軟さ、丁寧さ、スピード。そのすべてを一便に込めて。</p>
 
   <div class="grid grid-3">
 
     <div class="box">
       <h3>宅配委託便</h3>
       <p>
-        個人宅への丁寧な配送。<br>
-        お客様対応も含めた高品質を徹底。
+        個人宅への配送を中心に、丁寧で確実な配達を行います。<br>
+        お客様対応も含めた“企業の顔”としての品質を徹底。<br>
+        クレームを防ぎ、企業様の信頼を守る配送を実現します。
       </p>
     </div>
 
     <div class="box">
       <h3>スポット便</h3>
       <p>
-        急な配送にも柔軟対応。<br>
-        スピードと確実性を両立。
+        急な配送や単発の依頼にも柔軟に対応。<br>
+        「今すぐ届けたい」というニーズに対し、迅速かつ確実に対応します。<br>
+        緊急時でも安心して任せていただける体制を整えています。
       </p>
     </div>
 
     <div class="box">
-      <h3>企業配送</h3>
+      <h3>企業配送（ルート配送）</h3>
       <p>
-        企業の顔として責任ある配送。<br>
-        安定した品質を提供。
+        企業様の定期配送を担当し、安定した物流を支えます。<br>
+        企業の顔としての責任を持ち、正確で信頼される配送品質を提供。<br>
+        長期的に安心して任せていただけるパートナーを目指します。
       </p>
     </div>
 
   </div>
 
-  <p>対応エリア：大阪・和歌山</p>
+  <p>
+    対応エリア：大阪・和歌山<br><br>
+    私たちは地域の物流を支えています。<br>
+    まずはお気軽にご相談ください。
+  </p>
 </section>
 
 <!-- STORY -->
 <section id="story" class="fade">
   <h2>STORY</h2>
+
+  <p><strong>泥臭さを、誇りに変える。</strong></p>
+  <p>現場で積み重ねた経験が、今の配送品質をつくっている。</p>
+
   <p>
-    泥臭さを、誇りに変える。<br><br>
-    現場で積み重ねた経験が、今の品質をつくる。<br>
-    小さな会社だからこそ実現できる配送を追求しています。
+    配送の現場は、決してきれいごとだけではありません。<br>
+    それでも走り続けてきたのは、「届ける」という仕事に誇りがあるからです。
+  </p>
+
+  <p>
+    大きな会社ではできないことを、<br>
+    小さな会社だからこそ実現できる。<br>
+    その信念を持って、今日もハンドルを握っています。
   </p>
 </section>
 
@@ -188,13 +219,16 @@ footer {
 <section id="feature" class="fade">
   <h2>FEATURE</h2>
 
-  <div class="grid grid-3">
-    <div class="box">誠実な対応</div>
-    <div class="box">丁寧な配送</div>
-    <div class="box">柔軟な対応</div>
-  </div>
+  <p><strong>荷物と一緒に、信頼も届ける。</strong></p>
+  <p>選ばれる理由は、技術ではなく姿勢にある。</p>
 
-  <p>荷物と一緒に、信頼も届ける。</p>
+  <ul>
+    <li>誠実な対応</li>
+    <li>丁寧な配送品質</li>
+    <li>柔軟な対応力</li>
+    <li>地域密着</li>
+    <li>現場経験のある代表が指揮</li>
+  </ul>
 </section>
 
 <!-- COMPANY -->
@@ -203,6 +237,7 @@ footer {
 
   <p>
     株式会社ロクワン<br>
+    代表取締役　赤池和人
     大阪府泉南郡岬町望海坂1丁目3番6号<br>
     TEL：072-457-8717
   </p>
@@ -233,11 +268,10 @@ footer {
 </footer>
 
 <script>
-const fadeElements = document.querySelectorAll('.fade');
+const fade = document.querySelectorAll('.fade');
 window.addEventListener('scroll', () => {
-  fadeElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100){
+  fade.forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
       el.classList.add('show');
     }
   });
